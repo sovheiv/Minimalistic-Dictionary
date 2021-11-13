@@ -33,7 +33,7 @@ def get_info():
         and json_data["title"]
         and json_data["title"] == "No Definitions Found"
     ):
-        result["error_message"] = "No definitions dound"
+        result["error_message"] = "No definitions Found"
     elif type(json_data) == list and json_data[0]["meanings"][0]["definitions"]:
         definitions = [
             definition["definition"]
