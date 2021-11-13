@@ -12,4 +12,4 @@ This web-site helps you find a definition of word you need
 - end of line sequence must be LF
 
 
-https://www.ukraine.com.ua/wiki/hosting/errors/perl-or-python-script-not-work/
+[documentation](https://www.ukraine.com.ua/wiki/hosting/errors/perl-or-python-script-not-work/)

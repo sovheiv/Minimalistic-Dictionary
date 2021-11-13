@@ -16,9 +16,8 @@ def get_info():
     word = request.args.get("word")
 
     if not word:
-        word = environ.get("QUERY_STRING")  # if using CGI server
-
-    word = dict(parse_qsl(word).items())["word"]
+        word = environ.get("QUERY_STRING")
+        word = dict(parse_qsl(word))["word"]
 
     result = {
         "success": False,
