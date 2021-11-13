@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/python3.6
 print("Content-Type: text/html\n\n")
 msg = "Hello, World!"
 print("""%s""" % msg)
@@ -9,7 +9,6 @@ from config import activate_venv_path
 exec(open(activate_venv_path).read(), dict(__file__=activate_venv_path))
 
 from app import create_app
-
 
 
 class ProxyFix(object):

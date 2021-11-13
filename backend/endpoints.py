@@ -1,6 +1,7 @@
+from os import environ
+from urllib.parse import parse_qsl
 import requests
 from flask import Blueprint, request
-
 
 admin = Blueprint("admin", __name__)
 
@@ -13,6 +14,12 @@ def index():
 @admin.route("/definitions")
 def get_info():
     word = request.args.get("word")
+
+    if not word:
+        word = environ.get("QUERY_STRING")  # if using CGI server
+
+    word = dict(parse_qsl(word).items())["word"]
+
     result = {
         "success": False,
         "error_message": "",
