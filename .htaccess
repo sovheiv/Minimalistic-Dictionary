@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.+)$ /backend/run_server.cgi/$1 [L]
+DirectoryIndex /frontend/index.html
